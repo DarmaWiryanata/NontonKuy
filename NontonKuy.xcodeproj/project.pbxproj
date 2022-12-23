@@ -13,6 +13,7 @@
 		FA71EACA29555C5F00ED66AD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA71EAC929555C5F00ED66AD /* Preview Assets.xcassets */; };
 		FA71EAD32955F45400ED66AD /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA71EAD22955F45400ED66AD /* Color.swift */; };
 		FA71EAD7295601A000ED66AD /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA71EAD6295601A000ED66AD /* Movie.swift */; };
+		FA71EAD9295603BB00ED66AD /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA71EAD8295603BB00ED66AD /* PreviewProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		FA71EAC929555C5F00ED66AD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FA71EAD22955F45400ED66AD /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		FA71EAD6295601A000ED66AD /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		FA71EAD8295603BB00ED66AD /* PreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				FA71EAD22955F45400ED66AD /* Color.swift */,
+				FA71EAD8295603BB00ED66AD /* PreviewProvider.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 				FA71EAC229555C5E00ED66AD /* NontonKuyApp.swift in Sources */,
 				FA71EAD7295601A000ED66AD /* Movie.swift in Sources */,
 				FA71EAD32955F45400ED66AD /* Color.swift in Sources */,
+				FA71EAD9295603BB00ED66AD /* PreviewProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
