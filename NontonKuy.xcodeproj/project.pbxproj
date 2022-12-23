@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		FA71EAC229555C5E00ED66AD /* NontonKuyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA71EAC129555C5E00ED66AD /* NontonKuyApp.swift */; };
-		FA71EAC429555C5E00ED66AD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA71EAC329555C5E00ED66AD /* ContentView.swift */; };
+		FA71EAC429555C5E00ED66AD /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA71EAC329555C5E00ED66AD /* MainScreen.swift */; };
 		FA71EAC629555C5F00ED66AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA71EAC529555C5F00ED66AD /* Assets.xcassets */; };
 		FA71EACA29555C5F00ED66AD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA71EAC929555C5F00ED66AD /* Preview Assets.xcassets */; };
 		FA71EAD32955F45400ED66AD /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA71EAD22955F45400ED66AD /* Color.swift */; };
+		FA71EAD7295601A000ED66AD /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA71EAD6295601A000ED66AD /* Movie.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FA71EABE29555C5E00ED66AD /* NontonKuy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NontonKuy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA71EAC129555C5E00ED66AD /* NontonKuyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NontonKuyApp.swift; sourceTree = "<group>"; };
-		FA71EAC329555C5E00ED66AD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FA71EAC329555C5E00ED66AD /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
 		FA71EAC529555C5F00ED66AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA71EAC729555C5F00ED66AD /* NontonKuy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NontonKuy.entitlements; sourceTree = "<group>"; };
 		FA71EAC929555C5F00ED66AD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FA71EAD22955F45400ED66AD /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		FA71EAD6295601A000ED66AD /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				FA71EAC129555C5E00ED66AD /* NontonKuyApp.swift */,
 				FA71EAD12955F44400ED66AD /* Extensions */,
+				FA71EAD52956017F00ED66AD /* Models */,
 				FA71EAD02955F20C00ED66AD /* Views */,
 				FA71EAC529555C5F00ED66AD /* Assets.xcassets */,
 				FA71EAC729555C5F00ED66AD /* NontonKuy.entitlements */,
@@ -75,7 +78,7 @@
 		FA71EAD02955F20C00ED66AD /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				FA71EAC329555C5E00ED66AD /* ContentView.swift */,
+				FA71EAD42955F62F00ED66AD /* Screens */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -86,6 +89,22 @@
 				FA71EAD22955F45400ED66AD /* Color.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FA71EAD42955F62F00ED66AD /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				FA71EAC329555C5E00ED66AD /* MainScreen.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		FA71EAD52956017F00ED66AD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FA71EAD6295601A000ED66AD /* Movie.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,8 +177,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA71EAC429555C5E00ED66AD /* ContentView.swift in Sources */,
+				FA71EAC429555C5E00ED66AD /* MainScreen.swift in Sources */,
 				FA71EAC229555C5E00ED66AD /* NontonKuyApp.swift in Sources */,
+				FA71EAD7295601A000ED66AD /* Movie.swift in Sources */,
 				FA71EAD32955F45400ED66AD /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
