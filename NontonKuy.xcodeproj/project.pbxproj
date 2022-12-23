@@ -11,6 +11,7 @@
 		FA71EAC429555C5E00ED66AD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA71EAC329555C5E00ED66AD /* ContentView.swift */; };
 		FA71EAC629555C5F00ED66AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA71EAC529555C5F00ED66AD /* Assets.xcassets */; };
 		FA71EACA29555C5F00ED66AD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA71EAC929555C5F00ED66AD /* Preview Assets.xcassets */; };
+		FA71EAD32955F45400ED66AD /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA71EAD22955F45400ED66AD /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		FA71EAC529555C5F00ED66AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA71EAC729555C5F00ED66AD /* NontonKuy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NontonKuy.entitlements; sourceTree = "<group>"; };
 		FA71EAC929555C5F00ED66AD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FA71EAD22955F45400ED66AD /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +55,8 @@
 			isa = PBXGroup;
 			children = (
 				FA71EAC129555C5E00ED66AD /* NontonKuyApp.swift */,
-				FA71EAC329555C5E00ED66AD /* ContentView.swift */,
+				FA71EAD12955F44400ED66AD /* Extensions */,
+				FA71EAD02955F20C00ED66AD /* Views */,
 				FA71EAC529555C5F00ED66AD /* Assets.xcassets */,
 				FA71EAC729555C5F00ED66AD /* NontonKuy.entitlements */,
 				FA71EAC829555C5F00ED66AD /* Preview Content */,
@@ -67,6 +70,22 @@
 				FA71EAC929555C5F00ED66AD /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FA71EAD02955F20C00ED66AD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FA71EAC329555C5E00ED66AD /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FA71EAD12955F44400ED66AD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FA71EAD22955F45400ED66AD /* Color.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +160,7 @@
 			files = (
 				FA71EAC429555C5E00ED66AD /* ContentView.swift in Sources */,
 				FA71EAC229555C5E00ED66AD /* NontonKuyApp.swift in Sources */,
+				FA71EAD32955F45400ED66AD /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
