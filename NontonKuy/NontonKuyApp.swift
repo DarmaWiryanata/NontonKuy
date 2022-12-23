@@ -11,7 +11,7 @@ import SwiftUI
 struct NontonKuyApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainScreen()
         }
     }
 }
