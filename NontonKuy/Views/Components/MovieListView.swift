@@ -7,24 +7,26 @@
 
 import SwiftUI
 
-struct ShowsView: View {
+struct MovieListView: View {
+    let ranked: Bool
+    
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack {
                 Spacer()
                     .frame(width: 20)
                 
-                ForEach(0 ..< 5) { item in
-                    ShowCellView()
+                ForEach(0 ..< 5) { i in
+                    MovieCellView(rank: ranked ? "\(i + 1)" : "")
                 }
             }
         }
     }
 }
 
-struct ShowsView_Previews: PreviewProvider {
+struct MovieListView_Previews: PreviewProvider {
     static var previews: some View {
-        ShowsView()
+        MovieListView(ranked: true)
             .preferredColorScheme(.dark)
     }
 }

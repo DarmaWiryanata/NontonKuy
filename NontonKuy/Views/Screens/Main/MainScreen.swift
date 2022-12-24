@@ -14,9 +14,14 @@ struct MainScreen: View {
                 FeaturedView()
                     .padding(.bottom)
                 
-                // MARK: Trending Now
-                SectionHeaderView(title: "Trending Now")
-                ShowsView()
+                // MARK: Now Playing
+                SectionHeaderView(title: "Now Playing")
+                MovieListView(ranked: false)
+                    .padding(.bottom)
+                
+                // MARK: Most Popular
+                SectionHeaderView(title: "Most Popular")
+                MovieListView(ranked: true)
             }
             .background(Color.ui.background)
             
