@@ -11,23 +11,16 @@ struct SectionHeaderView: View {
     let title: String
     
     var body: some View {
-        NavigationLink {
-        } label: {
-            HStack {
-                // Section title
-                Text(title)
-                    .bold()
-                    .foregroundColor(Color.ui.primaryText)
-                
-                Spacer()
-                
-                // Chevron button
-                Image(systemName: "chevron.right")
-                    .foregroundColor(Color.ui.secondaryText)
-            }
-            .font(.title2)
-            .padding()
+        HStack {
+            // Section title
+            Text(title)
+                .bold()
+                .foregroundColor(Color.ui.primaryText)
+            
+            Spacer()
         }
+        .font(.title2)
+        .padding()
     }
 }
 
