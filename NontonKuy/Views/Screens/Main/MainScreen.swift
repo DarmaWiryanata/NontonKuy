@@ -12,9 +12,11 @@ struct MainScreen: View {
         NavigationView {
             ScrollView {
                 FeaturedView()
+                    .padding(.bottom)
                 
                 // MARK: Trending Now
                 SectionHeaderView(title: "Trending Now")
+                ShowsView()
             }
             .background(Color.ui.background)
             

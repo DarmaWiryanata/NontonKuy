@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		FA6C609529567A870063D86F /* FeaturedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C609429567A870063D86F /* FeaturedView.swift */; };
 		FA6C6098295681C60063D86F /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C6097295681C60063D86F /* SectionHeaderView.swift */; };
+		FA6C609A29568DD10063D86F /* ShowCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C609929568DD10063D86F /* ShowCellView.swift */; };
+		FA6C609C29568DE70063D86F /* ShowsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C609B29568DE70063D86F /* ShowsView.swift */; };
 		FA71EAC229555C5E00ED66AD /* NontonKuyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA71EAC129555C5E00ED66AD /* NontonKuyApp.swift */; };
 		FA71EAC429555C5E00ED66AD /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA71EAC329555C5E00ED66AD /* MainScreen.swift */; };
 		FA71EAC629555C5F00ED66AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA71EAC529555C5F00ED66AD /* Assets.xcassets */; };
@@ -22,6 +24,8 @@
 /* Begin PBXFileReference section */
 		FA6C609429567A870063D86F /* FeaturedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedView.swift; sourceTree = "<group>"; };
 		FA6C6097295681C60063D86F /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
+		FA6C609929568DD10063D86F /* ShowCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowCellView.swift; sourceTree = "<group>"; };
+		FA6C609B29568DE70063D86F /* ShowsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowsView.swift; sourceTree = "<group>"; };
 		FA71EABE29555C5E00ED66AD /* NontonKuy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NontonKuy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA71EAC129555C5E00ED66AD /* NontonKuyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NontonKuyApp.swift; sourceTree = "<group>"; };
 		FA71EAC329555C5E00ED66AD /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
@@ -66,6 +70,8 @@
 			isa = PBXGroup;
 			children = (
 				FA6C6097295681C60063D86F /* SectionHeaderView.swift */,
+				FA6C609929568DD10063D86F /* ShowCellView.swift */,
+				FA6C609B29568DE70063D86F /* ShowsView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -214,11 +220,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA6C609529567A870063D86F /* FeaturedView.swift in Sources */,
+				FA6C609C29568DE70063D86F /* ShowsView.swift in Sources */,
 				FA71EAC429555C5E00ED66AD /* MainScreen.swift in Sources */,
 				FA71EADB295608AD00ED66AD /* Image.swift in Sources */,
 				FA6C6098295681C60063D86F /* SectionHeaderView.swift in Sources */,
 				FA71EAC229555C5E00ED66AD /* NontonKuyApp.swift in Sources */,
 				FA71EAD7295601A000ED66AD /* Movie.swift in Sources */,
+				FA6C609A29568DD10063D86F /* ShowCellView.swift in Sources */,
 				FA71EAD32955F45400ED66AD /* Color.swift in Sources */,
 				FA71EAD9295603BB00ED66AD /* PreviewProvider.swift in Sources */,
 			);
