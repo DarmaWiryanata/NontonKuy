@@ -12,6 +12,7 @@ struct NontonKuyApp: App {
     var body: some Scene {
         WindowGroup {
             MainScreen()
+                .environment(\.colorScheme, .dark)
         }
     }
 }

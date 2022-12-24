@@ -12,17 +12,21 @@ struct MainScreen: View {
         NavigationView {
             ScrollView {
                 FeaturedView()
+                
+                // MARK: Trending Now
+                SectionHeaderView(title: "Trending Now")
             }
+            .background(Color.ui.background)
             
             .navigationTitle(Text("NontonKuy."))
             .navigationBarTitleDisplayMode(.inline)
         }
-        .background(Color.ui.background)
     }
 }
 
 struct MainScreen_Previews: PreviewProvider {
     static var previews: some View {
         MainScreen()
+            .preferredColorScheme(.dark)
     }
 }
