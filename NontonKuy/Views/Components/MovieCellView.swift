@@ -61,3 +61,59 @@ struct MovieCellView_Previews: PreviewProvider {
             .preferredColorScheme(.dark)
     }
 }
+
+struct MovieCellViewAPI: View {
+    let movie: Movie
+    let rank: Int?
+    
+    var body: some View {
+        NavigationLink {
+            MovieInfoScreen(title: movie.title)
+        } label: {
+            VStack(alignment: .leading) {
+                ZStack(alignment: .topTrailing) {
+                    AsyncImage(url: URL(string: "https://image.tmdb.org/t/p/w500/\(movie.posterPath)")!) { image in
+                        image
+                            .resizable()
+                            .scaledToFit()
+                            .clipShape(RoundedRectangle(cornerRadius: 20))
+                    } placeholder: {
+                        Text("Loading ...")
+                            .frame(maxWidth: .infinity)
+                            .frame(height: 300)
+                    }
+                    
+                    if let rank = rank {
+                        Text("\(rank)")
+                            .font(.callout)
+                            .padding()
+                            .overlay {
+                                Circle()
+                                    .stroke(
+                                        Color.ui.accent,
+                                        style: StrokeStyle(lineWidth: 3)
+                                    )
+                                    .foregroundColor(Color.ui.background)
+                            }
+                            .background {
+                                Circle()
+                                    .foregroundColor(Color.ui.background)
+                            }
+                            .padding(.trailing, 8)
+                    }
+                }
+                
+                Text(movie.title)
+                    .font(.title3)
+                    .fontWeight(.semibold)
+                    .foregroundColor(Color.ui.primaryText)
+                    .multilineTextAlignment(.leading)
+                    .lineLimit(1)
+                    .padding(.top, 8)
+                
+                Text("Action, Adventure")
+                    .foregroundColor(Color.ui.secondaryText)
+            }
+        }
+    }
+}

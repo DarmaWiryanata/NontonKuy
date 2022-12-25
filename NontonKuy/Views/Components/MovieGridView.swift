@@ -13,8 +13,8 @@ struct MovieGridView: View {
     
     var body: some View {
         LazyVGrid(columns: columns) {
-            ForEach(vm.trendingMovies) { item in
-                Text(item.title)
+            ForEach(vm.trendingMovies) { movie in
+                MovieCellViewAPI(movie: movie, rank: nil)
             }
         }
         .padding(.horizontal)
