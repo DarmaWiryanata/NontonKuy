@@ -33,3 +33,7 @@ struct Movie: Identifiable, Codable {
         case voteCount = "vote_count"
     }
 }
+
+struct MoviesResults: Codable {
+    let results: [Movie]
+}
