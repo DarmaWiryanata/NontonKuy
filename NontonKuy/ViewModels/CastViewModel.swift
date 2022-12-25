@@ -22,7 +22,7 @@ class CastViewModel: ObservableObject {
             .tryMap(handleOutput)
             .decode(type: CastsResults.self, decoder: JSONDecoder())
             .sink(receiveCompletion: { (completion) in
-                print(completion)
+
             }, receiveValue: { [weak self] (results) in
                 self?.movieCasts = results.cast
             })
