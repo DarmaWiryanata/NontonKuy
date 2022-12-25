@@ -10,35 +10,36 @@ import Foundation
 
 class MovieViewModel: ObservableObject {
     @Published var trendingMovies = [Movie]()
-    var cancellables = Set<AnyCancellable>()
+    @Published var isLoadingPage = false
     
-    private let movieDummies = Movie(
-        id: 76600,
-        adult: false,
-        backdropPath: "/tQ91wWQJ2WRNDXwxuO7GCXX5VPC.jpg",
-        genreIDS: [
-            878,
-            28,
-            12
-        ],
-        originalLanguage: "en",
-        originalTitle: "Avatar: The Way of Water",
-        overview: "Set more than a decade after the events of the first film, learn the story of the Sully family (Jake, Neytiri, and their kids), the trouble that follows them, the lengths they go to keep each other safe, the battles they fight to stay alive, and the tragedies they endure.",
-        popularity: 4109.455,
-        posterPath: "/94xxm5701CzOdJdUEdIuwqZaowx.jpg",
-        releaseDate: "2022-12-14",
-        title: "Avatar: The Way of Water",
-        video: false,
-        voteAverage: 8.1,
-        voteCount: 1001
-    )
+    private var currentPage = 1
+    private var canLoadMorePages = true
+    private var cancellables = Set<AnyCancellable>()
     
     init() {
         getTrendingMovies()
     }
     
+    func loadMoreContentIfNeeded(currentMovie movie: Movie?) {
+        guard let movie = movie else {
+            getTrendingMovies()
+            return
+        }
+
+        let thresholdIndex = trendingMovies.index(trendingMovies.endIndex, offsetBy: -5)
+        if trendingMovies.firstIndex(where: { $0.id == movie.id }) == thresholdIndex {
+            getTrendingMovies()
+        }
+    }
+    
     private func getTrendingMovies() {
-        guard let url = URL(string: "\(Config.tmdbBaseUrl)/discover/movie?language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_watch_monetization_types=flatrate&api_key=\(Config.tmdbApiKey)") else { return }
+        guard !isLoadingPage && canLoadMorePages else {
+            return
+        }
+        isLoadingPage = true
+        
+        guard let url = URL(string: "\(Config.tmdbBaseUrl)/discover/movie?language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=\(currentPage)&with_watch_monetization_types=flatrate&api_key=\(Config.tmdbApiKey)") else { return }
+        print(url)
 
         // 1. Sign up for monthly subscription for package to be delivered
         // 2. The company would make the package behind the scene
@@ -56,6 +57,11 @@ class MovieViewModel: ObservableObject {
         
         // 3. Receive on main thread
             .receive(on: DispatchQueue.main)
+            .handleEvents(receiveOutput: { response in
+                self.canLoadMorePages = true
+                self.isLoadingPage = false
+                self.currentPage += 1
+            })
         
         // 4. tryMap (check that the data is good)
             .tryMap(handleOutput)
@@ -67,7 +73,7 @@ class MovieViewModel: ObservableObject {
             .sink(receiveCompletion: { (completion) in
                 
             }, receiveValue: { [weak self] (results) in
-                self?.trendingMovies = results.results
+                self?.trendingMovies.append(contentsOf: results.results)
             })
         
         // 7. Store (cancel subscription if needed)

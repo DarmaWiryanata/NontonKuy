@@ -15,6 +15,13 @@ struct MovieGridView: View {
         LazyVGrid(columns: columns) {
             ForEach(vm.trendingMovies) { movie in
                 MovieCellView(movie: movie, rank: nil)
+                    .onAppear {
+                        vm.loadMoreContentIfNeeded(currentMovie: movie)
+                    }
+            }
+            
+            if vm.isLoadingPage {
+                ProgressView()
             }
         }
         .padding(.horizontal)
