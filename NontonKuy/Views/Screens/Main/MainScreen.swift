@@ -13,9 +13,6 @@ struct MainScreen: View {
     var body: some View {
         NavigationView {
             ScrollView {
-                // MARK: Featured movie
-                FeaturedView()
-                    .padding(.bottom)
                 
                 // MARK: Most popular
                 SectionHeaderView(title: "Most Popular")

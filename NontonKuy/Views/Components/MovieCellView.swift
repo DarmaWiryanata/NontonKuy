@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct MovieCellView: View {
+    
     let movie: Movie
     let rank: Int?
     
@@ -26,6 +27,7 @@ struct MovieCellView: View {
                         Text("Loading ...")
                             .frame(maxWidth: .infinity)
                             .frame(height: 300)
+                            .redacted(reason: .placeholder)
                     }
                     
                     if let rank = rank {

@@ -8,13 +8,17 @@
 import SwiftUI
 
 struct FeaturedView: View {
+    let movieVM: MovieViewModel
+    
     var body: some View {
         ZStack(alignment: .bottom) {
             // Backdrop
+            
             Image.ui.sampleBackdrop
                 .resizable()
                 .scaledToFill()
-                .frame(width: .infinity, height: 200)
+                .frame(maxWidth: .infinity)
+                .frame(height: 200)
                 .clipped()
             
             // Linear gradient background
@@ -25,7 +29,7 @@ struct FeaturedView: View {
             // Featured title & rating
             HStack(alignment: .bottom) {
                 // Title
-                Text("Avatar: The Way of Water")
+                Text(movieVM.trendingMovies[0].title)
                     .font(.headline)
                     .multilineTextAlignment(.leading)
                     .padding(.bottom, 8)
@@ -57,6 +61,6 @@ struct FeaturedView: View {
 
 struct FeaturedView_Previews: PreviewProvider {
     static var previews: some View {
-        FeaturedView()
+        FeaturedView(movieVM: MovieViewModel())
     }
 }
