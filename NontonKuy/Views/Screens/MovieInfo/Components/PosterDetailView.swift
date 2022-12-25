@@ -9,8 +9,9 @@ import SwiftUI
 
 struct PosterDetailView: View {
     @ObservedObject var videoVM: VideoViewModel
-    let movie: Movie
+    @State private var showWebView = false
     
+    let movie: Movie
     let posterHeight = UIScreen.main.bounds.height - 400
     let gradientColors = [Color.ui.background, .clear, Color.ui.background]
     
@@ -59,7 +60,7 @@ struct PosterDetailView: View {
                 ProgressView()
             } else {
                 Button {
-                    
+                    showWebView.toggle()
                 } label: {
                     Label("Play", systemImage: "play")
                         .labelStyle(.iconOnly)
@@ -71,6 +72,10 @@ struct PosterDetailView: View {
                         }
                 }
             }
+        }
+        
+        .sheet(isPresented: $showWebView) {
+            SafariView(url: URL(string: "https://www.youtube.com/watch?v=\(videoVM.movieVideos[0].key)")!)
         }
     }
     
@@ -85,24 +90,25 @@ struct PosterDetailView: View {
 
 struct PosterDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        PosterDetailView(videoVM: VideoViewModel(), movie: Movie(id: 76600,
-                                      adult: false,
-                                      backdropPath: "/tQ91wWQJ2WRNDXwxuO7GCXX5VPC.jpg",
-                                      genreIDS: [
-                                          878,
-                                          28,
-                                          12
-                                      ],
-                                      originalLanguage: "en",
-                                      originalTitle: "Avatar: The Way of Water",
-                                      overview: "Set more than a decade after the events of the first film, learn the story of the Sully family (Jake, Neytiri, and their kids), the trouble that follows them, the lengths they go to keep each other safe, the battles they fight to stay alive, and the tragedies they endure.",
-                                      popularity: 4109.455,
-                                      posterPath: "/94xxm5701CzOdJdUEdIuwqZaowx.jpg",
-                                      releaseDate: "2022-12-14",
-                                      title: "Avatar: The Way of Water",
-                                      video: false,
-                                      voteAverage: 8.1,
-                                      voteCount: 1001))
+        PosterDetailView(videoVM: VideoViewModel(), movie: Movie(
+            id: 76600,
+            adult: false,
+            backdropPath: "/tQ91wWQJ2WRNDXwxuO7GCXX5VPC.jpg",
+            genreIDS: [
+              878,
+              28,
+              12
+            ],
+            originalLanguage: "en",
+            originalTitle: "Avatar: The Way of Water",
+            overview: "Set more than a decade after the events of the first film, learn the story of the Sully family (Jake, Neytiri, and their kids), the trouble that follows them, the lengths they go to keep each other safe, the battles they fight to stay alive, and the tragedies they endure.",
+            popularity: 4109.455,
+            posterPath: "/94xxm5701CzOdJdUEdIuwqZaowx.jpg",
+            releaseDate: "2022-12-14",
+            title: "Avatar: The Way of Water",
+            video: false,
+            voteAverage: 8.1,
+            voteCount: 1001))
             .frame(maxHeight: UIScreen.main.bounds.height - 400)
     }
 }
