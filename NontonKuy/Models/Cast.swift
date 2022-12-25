@@ -15,7 +15,7 @@ struct CastsResults: Codable {
 // MARK: - Cast
 struct Cast: Identifiable, Codable {
     let id: Int
-    let knownForDepartment: CastDepartment
+    let knownForDepartment: String
     let name, originalName: String
     let profilePath: String?
     
@@ -26,20 +26,5 @@ struct Cast: Identifiable, Codable {
         case originalName = "original_name"
         case profilePath = "profile_path"
     }
-}
-
-enum CastDepartment {
-    case acting
-    case art
-    case camera
-    case costumeMakeUp
-    case crew
-    case directing
-    case editing
-    case lighting
-    case production
-    case sound
-    case visualEffects
-    case writing
 }
 

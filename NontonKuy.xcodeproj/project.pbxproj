@@ -30,6 +30,7 @@
 		FAF430A92958839600992B0A /* SeparatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF430A82958839600992B0A /* SeparatorView.swift */; };
 		FAF430AB2958847000992B0A /* RateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF430AA2958847000992B0A /* RateView.swift */; };
 		FAF430AD295889BC00992B0A /* Cast.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF430AC295889BC00992B0A /* Cast.swift */; };
+		FAF430AF29588ADF00992B0A /* CastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF430AE29588ADF00992B0A /* CastViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		FAF430A82958839600992B0A /* SeparatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeparatorView.swift; sourceTree = "<group>"; };
 		FAF430AA2958847000992B0A /* RateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateView.swift; sourceTree = "<group>"; };
 		FAF430AC295889BC00992B0A /* Cast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cast.swift; sourceTree = "<group>"; };
+		FAF430AE29588ADF00992B0A /* CastViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				FA6C609E295696920063D86F /* MovieViewModel.swift */,
 				FAF430992958644900992B0A /* VideoViewModel.swift */,
 				FAF430A229587B0200992B0A /* ReviewViewModel.swift */,
+				FAF430AE29588ADF00992B0A /* CastViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAF430A729587CD100992B0A /* ReviewsView.swift in Sources */,
+				FAF430AF29588ADF00992B0A /* CastViewModel.swift in Sources */,
 				FA6C60A52957588C0063D86F /* PosterDetailView.swift in Sources */,
 				FAF430962958582B00992B0A /* Config.swift in Sources */,
 				FAF430A92958839600992B0A /* SeparatorView.swift in Sources */,
