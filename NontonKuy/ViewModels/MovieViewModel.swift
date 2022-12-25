@@ -78,34 +78,15 @@ class MovieViewModel: ObservableObject {
         
         // 7. Store (cancel subscription if needed)
             .store(in: &cancellables)
-    }
-    
-    func getMovie(id: Int) {
-        let url = URL(string: "https://api.themoviedb.org/3/movie/\("\(id)")?api_key=eeb90e5bbc4a740b97cc7a4d5a610f06&append_to_response=videos")!
         
-        URLSession.shared.dataTaskPublisher(for: url)
-            .subscribe(on: DispatchQueue.global(qos: .background))
-            .receive(on: DispatchQueue.main)
-            .tryMap(handleOutput)
-            .decode(type: Movie.self, decoder: JSONDecoder())
-            .sink(receiveCompletion: { (completion) in
-                
-            }, receiveValue: { [weak self] (result) in
-                self?.movie = result
-                print(self?.movie)
-            })
-            .store(in: &cancellables)
-        
-        print(self.movie)
-    }
-    
-    func handleOutput(output: URLSession.DataTaskPublisher.Output) throws -> Data {
-        guard
-            let response = output.response as? HTTPURLResponse,
-            response.statusCode >= 200 && response.statusCode < 300 else {
-            throw URLError(.badServerResponse)
+        func handleOutput(output: URLSession.DataTaskPublisher.Output) throws -> Data {
+            guard
+                let response = output.response as? HTTPURLResponse,
+                response.statusCode >= 200 && response.statusCode < 300 else {
+                throw URLError(.badServerResponse)
+            }
+            
+            return output.data
         }
-        
-        return output.data
     }
 }

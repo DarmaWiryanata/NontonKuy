@@ -24,7 +24,6 @@
 		FA71EADB295608AD00ED66AD /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA71EADA295608AD00ED66AD /* Image.swift */; };
 		FAF430572957D0E200992B0A /* MovieGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF430562957D0E200992B0A /* MovieGridView.swift */; };
 		FAF430962958582B00992B0A /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF430952958582B00992B0A /* Config.swift */; };
-		FAF4309329582EA100992B0A /* ShownMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF4309229582EA100992B0A /* ShownMovie.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,7 +46,6 @@
 		FA71EADA295608AD00ED66AD /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		FAF430562957D0E200992B0A /* MovieGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieGridView.swift; sourceTree = "<group>"; };
 		FAF430952958582B00992B0A /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
-		FAF4309229582EA100992B0A /* ShownMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShownMovie.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,7 +184,6 @@
 			isa = PBXGroup;
 			children = (
 				FA71EAD6295601A000ED66AD /* Movie.swift */,
-				FAF4309229582EA100992B0A /* ShownMovie.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -273,7 +270,6 @@
 				FA6C609A29568DD10063D86F /* MovieCellView.swift in Sources */,
 				FA6C60A22956998E0063D86F /* MovieInfoScreen.swift in Sources */,
 				FA6C609F295696920063D86F /* MovieViewModel.swift in Sources */,
-				FAF4309329582EA100992B0A /* ShownMovie.swift in Sources */,
 				FAF430572957D0E200992B0A /* MovieGridView.swift in Sources */,
 				FA71EAD32955F45400ED66AD /* Color.swift in Sources */,
 				FA71EAD9295603BB00ED66AD /* PreviewProvider.swift in Sources */,
