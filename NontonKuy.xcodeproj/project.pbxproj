@@ -29,6 +29,7 @@
 		FAF430A729587CD100992B0A /* ReviewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF430A629587CD100992B0A /* ReviewsView.swift */; };
 		FAF430A92958839600992B0A /* SeparatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF430A82958839600992B0A /* SeparatorView.swift */; };
 		FAF430AB2958847000992B0A /* RateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF430AA2958847000992B0A /* RateView.swift */; };
+		FAF430AD295889BC00992B0A /* Cast.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF430AC295889BC00992B0A /* Cast.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		FAF430A629587CD100992B0A /* ReviewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsView.swift; sourceTree = "<group>"; };
 		FAF430A82958839600992B0A /* SeparatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeparatorView.swift; sourceTree = "<group>"; };
 		FAF430AA2958847000992B0A /* RateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateView.swift; sourceTree = "<group>"; };
+		FAF430AC295889BC00992B0A /* Cast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cast.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +193,7 @@
 				FA71EAD6295601A000ED66AD /* Movie.swift */,
 				FAF430972958635A00992B0A /* Video.swift */,
 				FAF430A0295879F100992B0A /* Review.swift */,
+				FAF430AC295889BC00992B0A /* Cast.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 				FA6C609A29568DD10063D86F /* MovieCellView.swift in Sources */,
 				FA6C60A22956998E0063D86F /* MovieInfoScreen.swift in Sources */,
 				FA6C609F295696920063D86F /* MovieViewModel.swift in Sources */,
+				FAF430AD295889BC00992B0A /* Cast.swift in Sources */,
 				FAF430AB2958847000992B0A /* RateView.swift in Sources */,
 				FAF430982958635A00992B0A /* Video.swift in Sources */,
 				FAF430A329587B0200992B0A /* ReviewViewModel.swift in Sources */,
