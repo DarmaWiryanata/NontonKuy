@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct PosterDetailView: View {
+    @ObservedObject var videoVM: VideoViewModel
     let movie: Movie
     
     let posterHeight = UIScreen.main.bounds.height - 400
@@ -54,16 +55,21 @@ struct PosterDetailView: View {
                 .padding(.bottom)
             }
             
-            Button {
-            } label: {
-                Label("Play", systemImage: "play")
-                    .labelStyle(.iconOnly)
-                    .font(.title)
-                    .padding(24)
-                    .background {
-                        Circle()
-                            .foregroundColor(Color.ui.background)
-                    }
+            if videoVM.isLoadingVideo {
+                ProgressView()
+            } else {
+                Button {
+                    
+                } label: {
+                    Label("Play", systemImage: "play")
+                        .labelStyle(.iconOnly)
+                        .font(.title)
+                        .padding(24)
+                        .background {
+                            Circle()
+                                .foregroundColor(Color.ui.background)
+                        }
+                }
             }
         }
     }
@@ -79,7 +85,7 @@ struct PosterDetailView: View {
 
 struct PosterDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        PosterDetailView(movie: Movie(id: 76600,
+        PosterDetailView(videoVM: VideoViewModel(), movie: Movie(id: 76600,
                                       adult: false,
                                       backdropPath: "/tQ91wWQJ2WRNDXwxuO7GCXX5VPC.jpg",
                                       genreIDS: [

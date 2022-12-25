@@ -13,8 +13,16 @@ struct Video: Identifiable, Codable {
     let type: String
     let official: Bool
     let publishedAt: String
+    
+    enum CodingKeys: String, CodingKey {
+        case id
+        case iso6391 = "iso_639_1"
+        case iso31661 = "iso_3166_1"
+        case name, key, site, size, type, official
+        case publishedAt = "published_at"
+    }
 }
 
 struct VideosResults: Codable {
-    let results: [Movie]
+    let results: [Video]
 }

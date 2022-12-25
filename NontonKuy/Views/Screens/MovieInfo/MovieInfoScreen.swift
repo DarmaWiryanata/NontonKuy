@@ -8,20 +8,31 @@
 import SwiftUI
 
 struct MovieInfoScreen: View {
+    @StateObject var videoVM = VideoViewModel()
+    
     let title: String
     let movie: Movie
     
     var body: some View {
         ScrollView {
-            PosterDetailView(movie: movie)
+            PosterDetailView(videoVM: videoVM, movie: movie)
             
             // MARK: Overview
             SectionHeaderView(title: "Overview")
             Text(movie.overview)
                 .foregroundColor(Color.ui.secondaryText)
                 .padding(.horizontal)
+            
+            List {
+                ForEach(videoVM.movieVideos) { item in
+                    Text(item.name)
+                }
+            }
         }
         .edgesIgnoringSafeArea(.top)
+        .onAppear {
+            videoVM.getVideos(id: movie.id)
+        }
         
         .navigationTitle(title)
         .navigationBarTitleDisplayMode(.inline)
