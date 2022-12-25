@@ -37,16 +37,16 @@ struct PosterDetailView: View {
                 Spacer()
                 
                 HStack {
-                    // Rate
-                    RateView(value: movie.voteAverage)
+                    // Release year
+                    Text(movie.releaseDate.prefix(4))
+                        .foregroundColor(Color.ui.primaryText)
                     
                     // Separator
                     SeparatorView()
                         .padding(.horizontal)
                     
-                    // Release year
-                    Text(movie.releaseDate.prefix(4))
-                        .foregroundColor(Color.ui.primaryText)
+                    // Rate
+                    RateView(value: movie.voteAverage)
                 }
                 .padding(.bottom)
             }

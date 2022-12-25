@@ -14,7 +14,6 @@ struct InfoView: View {
         VStack(alignment: .leading) {
             SectionHeaderView(title: "Overview")
             Text(overview)
-                .foregroundColor(Color.ui.secondaryText)
                 .padding(.horizontal)
         }
     }
