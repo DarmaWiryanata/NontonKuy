@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct MovieCellView: View {
-    
     let movie: Movie
     let rank: Int?
     

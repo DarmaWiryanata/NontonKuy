@@ -15,6 +15,7 @@ struct MovieInfoScreen: View {
     
     var body: some View {
         ScrollView {
+            // MARK: Poster
             PosterDetailView(videoVM: videoVM, movie: movie)
             
             // MARK: Overview
@@ -22,12 +23,6 @@ struct MovieInfoScreen: View {
             Text(movie.overview)
                 .foregroundColor(Color.ui.secondaryText)
                 .padding(.horizontal)
-            
-            List {
-                ForEach(videoVM.movieVideos) { item in
-                    Text(item.name)
-                }
-            }
         }
         .edgesIgnoringSafeArea(.top)
         .onAppear {

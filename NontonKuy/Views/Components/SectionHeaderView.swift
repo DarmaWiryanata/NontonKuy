@@ -12,7 +12,6 @@ struct SectionHeaderView: View {
     
     var body: some View {
         HStack {
-            // Section title
             Text(title)
                 .bold()
                 .foregroundColor(Color.ui.primaryText)

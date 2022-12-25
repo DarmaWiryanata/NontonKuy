@@ -10,18 +10,24 @@ import SwiftUI
 struct MainScreen: View {
     @StateObject var movieVM = MovieViewModel()
     
+    let columns = [GridItem(), GridItem()]
+    
     var body: some View {
         NavigationView {
             ScrollView {
-                
-                // MARK: Most popular
-                SectionHeaderView(title: "Most Popular")
-                MovieListView()
-                    .padding(.bottom)
-                
-                // MARK: Now playing
-                SectionHeaderView(title: "Now Playing")
-                MovieGridView(vm: movieVM)
+                LazyVGrid(columns: columns) {
+                    ForEach(movieVM.trendingMovies) { movie in
+                        MovieCellView(movie: movie, rank: nil)
+                            .onAppear {
+                                movieVM.loadMoreContentIfNeeded(currentMovie: movie)
+                            }
+                    }
+                    
+                    if movieVM.isLoadingPage {
+                        ProgressView()
+                    }
+                }
+                .padding(.horizontal)
             }
             .background(Color.ui.background)
             
