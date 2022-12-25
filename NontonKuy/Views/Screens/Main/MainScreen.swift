@@ -31,7 +31,7 @@ struct MainScreen: View {
             }
             .background(Color.ui.background)
             
-            .navigationTitle(Text("NontonKuy."))
+            .navigationTitle(Text("NontonKuy"))
             .navigationBarTitleDisplayMode(.inline)
         }
     }
