@@ -17,6 +17,7 @@ struct MovieListView: View {
                 ForEach(0 ..< 5) { i in
                     MovieCellView(rank: i + 1)
                         .frame(width: 175)
+                        .padding(.trailing)
                 }
             }
         }

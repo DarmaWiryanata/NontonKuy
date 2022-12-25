@@ -40,7 +40,6 @@ struct MovieCellView: View {
                             .padding(.trailing, 8)
                     }
                 }
-                .padding(.trailing)
                 
                 Text("Avatar: The Way of Water")
                     .font(.title3)

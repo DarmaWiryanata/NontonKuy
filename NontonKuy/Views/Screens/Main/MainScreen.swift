@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct MainScreen: View {
+    let columns = [GridItem(), GridItem()]
+    
     var body: some View {
         NavigationView {
             ScrollView {
@@ -22,7 +24,11 @@ struct MainScreen: View {
                 
                 // MARK: Now playing
                 SectionHeaderView(title: "Now Playing")
-                MovieListView()
+                LazyVGrid(columns: columns) {
+                    MovieCellView(rank: nil)
+                    MovieCellView(rank: nil)
+                }
+                .padding(.horizontal)
             }
             .background(Color.ui.background)
             
