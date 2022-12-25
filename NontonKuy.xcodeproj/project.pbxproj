@@ -146,7 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				FA71EAC129555C5E00ED66AD /* NontonKuyApp.swift */,
-				FAF430952958582B00992B0A /* Config.swift */,
+				FAF430B22958921600992B0A /* Config */,
 				FA71EAD12955F44400ED66AD /* Extensions */,
 				FA71EAD52956017F00ED66AD /* Models */,
 				FA6C609D295696810063D86F /* ViewModels */,
@@ -202,6 +202,14 @@
 				FAF430AC295889BC00992B0A /* Cast.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		FAF430B22958921600992B0A /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				FAF430952958582B00992B0A /* Config.swift */,
+			);
+			path = Config;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
