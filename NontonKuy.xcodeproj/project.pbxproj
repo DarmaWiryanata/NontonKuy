@@ -31,6 +31,7 @@
 		FAF430AB2958847000992B0A /* RateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF430AA2958847000992B0A /* RateView.swift */; };
 		FAF430AD295889BC00992B0A /* Cast.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF430AC295889BC00992B0A /* Cast.swift */; };
 		FAF430AF29588ADF00992B0A /* CastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF430AE29588ADF00992B0A /* CastViewModel.swift */; };
+		FAF430B12958900500992B0A /* CastsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF430B02958900500992B0A /* CastsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		FAF430AA2958847000992B0A /* RateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateView.swift; sourceTree = "<group>"; };
 		FAF430AC295889BC00992B0A /* Cast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cast.swift; sourceTree = "<group>"; };
 		FAF430AE29588ADF00992B0A /* CastViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastViewModel.swift; sourceTree = "<group>"; };
+		FAF430B02958900500992B0A /* CastsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 				FA6C60A42957588C0063D86F /* PosterDetailView.swift */,
 				FAF430A429587C0900992B0A /* InfoView.swift */,
 				FAF430A629587CD100992B0A /* ReviewsView.swift */,
+				FAF430B02958900500992B0A /* CastsView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 				FA71EAC229555C5E00ED66AD /* NontonKuyApp.swift in Sources */,
 				FA71EAD7295601A000ED66AD /* Movie.swift in Sources */,
 				FAF4309F295870DA00992B0A /* SafariView.swift in Sources */,
+				FAF430B12958900500992B0A /* CastsView.swift in Sources */,
 				FA6C609A29568DD10063D86F /* MovieCellView.swift in Sources */,
 				FA6C60A22956998E0063D86F /* MovieInfoScreen.swift in Sources */,
 				FA6C609F295696920063D86F /* MovieViewModel.swift in Sources */,

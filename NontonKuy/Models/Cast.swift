@@ -18,6 +18,7 @@ struct Cast: Identifiable, Codable {
     let knownForDepartment: String
     let name, originalName: String
     let profilePath: String?
+    let character: String?
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -25,6 +26,7 @@ struct Cast: Identifiable, Codable {
         case name
         case originalName = "original_name"
         case profilePath = "profile_path"
+        case character
     }
 }
 

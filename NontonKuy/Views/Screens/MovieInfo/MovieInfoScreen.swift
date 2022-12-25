@@ -10,6 +10,7 @@ import SwiftUI
 struct MovieInfoScreen: View {
     @StateObject var videoVM = VideoViewModel()
     @StateObject var reviewVM = ReviewViewModel()
+    @StateObject var castVM = CastViewModel()
     @State private var selectedTab = "Info"
     
     let title: String
@@ -21,6 +22,7 @@ struct MovieInfoScreen: View {
             // MARK: Poster
             PosterDetailView(videoVM: videoVM, movie: movie)
             
+            // Tab view
             Picker("Tab", selection: $selectedTab) {
                 ForEach(tab, id: \.self) {
                     Text($0)
@@ -33,6 +35,9 @@ struct MovieInfoScreen: View {
             if selectedTab == "Info" {
                 // MARK: Overview
                 InfoView(overview: movie.overview)
+                
+                // MARK: Casts
+                CastsView(casts: castVM.movieCasts)
             } else {
                 // MARK: Reviews
                 ReviewsView(vm: reviewVM)
@@ -42,6 +47,7 @@ struct MovieInfoScreen: View {
         .onAppear {
             videoVM.getVideos(id: movie.id)
             reviewVM.getReviews(id: movie.id)
+            castVM.getCasts(id: movie.id)
         }
         
         .navigationTitle(title)
