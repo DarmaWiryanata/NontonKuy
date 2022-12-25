@@ -23,6 +23,7 @@
 		FAF430982958635A00992B0A /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF430972958635A00992B0A /* Video.swift */; };
 		FAF4309A2958644900992B0A /* VideoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF430992958644900992B0A /* VideoViewModel.swift */; };
 		FAF4309F295870DA00992B0A /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF4309E295870DA00992B0A /* SafariView.swift */; };
+		FAF430A1295879F100992B0A /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF430A0295879F100992B0A /* Review.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		FAF430972958635A00992B0A /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		FAF430992958644900992B0A /* VideoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewModel.swift; sourceTree = "<group>"; };
 		FAF4309E295870DA00992B0A /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
+		FAF430A0295879F100992B0A /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +175,7 @@
 			children = (
 				FA71EAD6295601A000ED66AD /* Movie.swift */,
 				FAF430972958635A00992B0A /* Video.swift */,
+				FAF430A0295879F100992B0A /* Review.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 				FA71EAC429555C5E00ED66AD /* MainScreen.swift in Sources */,
 				FAF4309A2958644900992B0A /* VideoViewModel.swift in Sources */,
 				FA71EADB295608AD00ED66AD /* Image.swift in Sources */,
+				FAF430A1295879F100992B0A /* Review.swift in Sources */,
 				FA6C6098295681C60063D86F /* SectionHeaderView.swift in Sources */,
 				FA71EAC229555C5E00ED66AD /* NontonKuyApp.swift in Sources */,
 				FA71EAD7295601A000ED66AD /* Movie.swift in Sources */,
