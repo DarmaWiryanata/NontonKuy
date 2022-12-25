@@ -11,17 +11,18 @@ struct MainScreen: View {
     var body: some View {
         NavigationView {
             ScrollView {
+                // MARK: Featured movie
                 FeaturedView()
                     .padding(.bottom)
                 
-                // MARK: Now Playing
-                SectionHeaderView(title: "Now Playing")
-                MovieListView(ranked: false)
+                // MARK: Most popular
+                SectionHeaderView(title: "Most Popular")
+                MovieListView()
                     .padding(.bottom)
                 
-                // MARK: Most Popular
-                SectionHeaderView(title: "Most Popular")
-                MovieListView(ranked: true)
+                // MARK: Now playing
+                SectionHeaderView(title: "Now Playing")
+                MovieListView()
             }
             .background(Color.ui.background)
             

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MovieCellView: View {
-    let rank: String
+    let rank: Int?
     
     var body: some View {
         NavigationLink {
@@ -21,8 +21,8 @@ struct MovieCellView: View {
                         .scaledToFit()
                         .clipShape(RoundedRectangle(cornerRadius: 20))
                     
-                    if rank != "" {
-                        Text(rank)
+                    if let rank = rank {
+                        Text("\(rank)")
                             .font(.callout)
                             .padding()
                             .overlay {
@@ -52,14 +52,13 @@ struct MovieCellView: View {
                 Text("Action, Adventure")
                     .foregroundColor(Color.ui.secondaryText)
             }
-            .frame(width: 175)
         }
     }
 }
 
 struct MovieCellView_Previews: PreviewProvider {
     static var previews: some View {
-        MovieCellView(rank: "1")
+        MovieCellView(rank: 1)
             .preferredColorScheme(.dark)
     }
 }

@@ -8,8 +8,6 @@
 import SwiftUI
 
 struct MovieListView: View {
-    let ranked: Bool
-    
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack {
@@ -17,7 +15,8 @@ struct MovieListView: View {
                     .frame(width: 20)
                 
                 ForEach(0 ..< 5) { i in
-                    MovieCellView(rank: ranked ? "\(i + 1)" : "")
+                    MovieCellView(rank: i + 1)
+                        .frame(width: 175)
                 }
             }
         }
@@ -26,7 +25,7 @@ struct MovieListView: View {
 
 struct MovieListView_Previews: PreviewProvider {
     static var previews: some View {
-        MovieListView(ranked: true)
+        MovieListView()
             .preferredColorScheme(.dark)
     }
 }
