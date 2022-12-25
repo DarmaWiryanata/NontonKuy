@@ -9,11 +9,13 @@ import SwiftUI
 
 struct MovieGridView: View {
     let columns = [GridItem(), GridItem()]
+    let vm: MovieViewModel
     
     var body: some View {
         LazyVGrid(columns: columns) {
-            MovieCellView(rank: nil)
-            MovieCellView(rank: nil)
+            ForEach(vm.trendingMovies) { item in
+                Text(item.title)
+            }
         }
         .padding(.horizontal)
     }
@@ -21,7 +23,7 @@ struct MovieGridView: View {
 
 struct MovieGridView_Previews: PreviewProvider {
     static var previews: some View {
-        MovieGridView()
+        MovieGridView(vm: MovieViewModel())
             .preferredColorScheme(.dark)
     }
 }

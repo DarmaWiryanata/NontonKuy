@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct MainScreen: View {
+    @StateObject var movieVM = MovieViewModel()
+    
     var body: some View {
         NavigationView {
             ScrollView {
@@ -22,7 +24,7 @@ struct MainScreen: View {
                 
                 // MARK: Now playing
                 SectionHeaderView(title: "Now Playing")
-                MovieGridView()
+                MovieGridView(vm: movieVM)
             }
             .background(Color.ui.background)
             
