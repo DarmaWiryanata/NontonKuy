@@ -10,20 +10,33 @@ import SwiftUI
 struct MovieInfoScreen: View {
     @StateObject var videoVM = VideoViewModel()
     @StateObject var reviewVM = ReviewViewModel()
+    @State private var selectedTab = "Info"
     
     let title: String
     let movie: Movie
+    var tab = ["Info", "Review"]
     
     var body: some View {
         ScrollView {
             // MARK: Poster
             PosterDetailView(videoVM: videoVM, movie: movie)
             
-            // MARK: Overview
-            InfoView(overview: movie.overview)
+            Picker("Tab", selection: $selectedTab) {
+                ForEach(tab, id: \.self) {
+                    Text($0)
+                        .id($0)
+                }
+            }
+            .pickerStyle(.segmented)
+            .padding([.top, .horizontal])
             
-            // MARK: Reviews
-            ReviewsView(vm: reviewVM)
+            if selectedTab == "Info" {
+                // MARK: Overview
+                InfoView(overview: movie.overview)
+            } else {
+                // MARK: Reviews
+                ReviewsView(vm: reviewVM)
+            }
         }
         .edgesIgnoringSafeArea(.top)
         .onAppear {
