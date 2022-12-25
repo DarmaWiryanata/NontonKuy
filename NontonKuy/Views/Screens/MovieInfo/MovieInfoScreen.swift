@@ -19,10 +19,7 @@ struct MovieInfoScreen: View {
             PosterDetailView(videoVM: videoVM, movie: movie)
             
             // MARK: Overview
-            SectionHeaderView(title: "Overview")
-            Text(movie.overview)
-                .foregroundColor(Color.ui.secondaryText)
-                .padding(.horizontal)
+            InfoView(overview: movie.overview)
         }
         .edgesIgnoringSafeArea(.top)
         .onAppear {

@@ -25,6 +25,7 @@
 		FAF4309F295870DA00992B0A /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF4309E295870DA00992B0A /* SafariView.swift */; };
 		FAF430A1295879F100992B0A /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF430A0295879F100992B0A /* Review.swift */; };
 		FAF430A329587B0200992B0A /* ReviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF430A229587B0200992B0A /* ReviewViewModel.swift */; };
+		FAF430A529587C0900992B0A /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF430A429587C0900992B0A /* InfoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		FAF4309E295870DA00992B0A /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
 		FAF430A0295879F100992B0A /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		FAF430A229587B0200992B0A /* ReviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewModel.swift; sourceTree = "<group>"; };
+		FAF430A429587C0900992B0A /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				FA6C60A42957588C0063D86F /* PosterDetailView.swift */,
+				FAF430A429587C0900992B0A /* InfoView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 				FAF430962958582B00992B0A /* Config.swift in Sources */,
 				FA71EAC429555C5E00ED66AD /* MainScreen.swift in Sources */,
 				FAF4309A2958644900992B0A /* VideoViewModel.swift in Sources */,
+				FAF430A529587C0900992B0A /* InfoView.swift in Sources */,
 				FA71EADB295608AD00ED66AD /* Image.swift in Sources */,
 				FAF430A1295879F100992B0A /* Review.swift in Sources */,
 				FA6C6098295681C60063D86F /* SectionHeaderView.swift in Sources */,
