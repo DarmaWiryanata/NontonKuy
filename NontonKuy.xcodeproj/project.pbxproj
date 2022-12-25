@@ -23,6 +23,7 @@
 		FA71EAD9295603BB00ED66AD /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA71EAD8295603BB00ED66AD /* PreviewProvider.swift */; };
 		FA71EADB295608AD00ED66AD /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA71EADA295608AD00ED66AD /* Image.swift */; };
 		FAF430572957D0E200992B0A /* MovieGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF430562957D0E200992B0A /* MovieGridView.swift */; };
+		FAF430962958582B00992B0A /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF430952958582B00992B0A /* Config.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		FA71EAD8295603BB00ED66AD /* PreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
 		FA71EADA295608AD00ED66AD /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		FAF430562957D0E200992B0A /* MovieGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieGridView.swift; sourceTree = "<group>"; };
+		FAF430952958582B00992B0A /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 				FA71EAC529555C5F00ED66AD /* Assets.xcassets */,
 				FA71EAC729555C5F00ED66AD /* NontonKuy.entitlements */,
 				FA71EAC829555C5F00ED66AD /* Preview Content */,
+				FAF430952958582B00992B0A /* Config.swift */,
 			);
 			path = NontonKuy;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 			files = (
 				FA6C60A52957588C0063D86F /* PosterDetailView.swift in Sources */,
 				FA6C609529567A870063D86F /* FeaturedView.swift in Sources */,
+				FAF430962958582B00992B0A /* Config.swift in Sources */,
 				FA6C609C29568DE70063D86F /* MovieListView.swift in Sources */,
 				FA71EAC429555C5E00ED66AD /* MainScreen.swift in Sources */,
 				FA71EADB295608AD00ED66AD /* Image.swift in Sources */,

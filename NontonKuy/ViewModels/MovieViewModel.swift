@@ -38,7 +38,7 @@ class MovieViewModel: ObservableObject {
     }
     
     private func getTrendingMovies() {
-        guard let url = URL(string: "https://api.themoviedb.org/3/discover/movie?api_key=eeb90e5bbc4a740b97cc7a4d5a610f06&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_watch_monetization_types=flatrate") else { return }
+        guard let url = URL(string: "\(Config.tmdbBaseUrl)/discover/movie?language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_watch_monetization_types=flatrate&api_key=\(Config.tmdbApiKey)") else { return }
 
         // 1. Sign up for monthly subscription for package to be delivered
         // 2. The company would make the package behind the scene
