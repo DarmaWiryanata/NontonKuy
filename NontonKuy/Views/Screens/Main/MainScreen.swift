@@ -16,7 +16,7 @@ struct MainScreen: View {
         NavigationView {
             ScrollView {
                 LazyVGrid(columns: columns) {
-                    ForEach(movieVM.trendingMovies) { movie in
+                    ForEach(movieVM.movies) { movie in
                         MovieCellView(movie: movie, rank: nil)
                             .onAppear {
                                 movieVM.loadMoreContentIfNeeded(currentMovie: movie)

@@ -26,8 +26,8 @@ class MovieViewModel: ObservableObject {
             return
         }
 
-        let thresholdIndex = trendingMovies.index(trendingMovies.endIndex, offsetBy: -5)
-        if trendingMovies.firstIndex(where: { $0.id == movie.id }) == thresholdIndex {
+        let thresholdIndex = movies.index(movies.endIndex, offsetBy: -5)
+        if movies.firstIndex(where: { $0.id == movie.id }) == thresholdIndex {
             getMovies()
         }
     }
@@ -53,7 +53,7 @@ class MovieViewModel: ObservableObject {
             .sink(receiveCompletion: { (completion) in
                 
             }, receiveValue: { [weak self] (results) in
-                self?.trendingMovies.append(contentsOf: results.results)
+                self?.movies.append(contentsOf: results.results)
             })
             .store(in: &cancellables)
         
