@@ -38,16 +38,11 @@ struct PosterDetailView: View {
                 
                 HStack {
                     // Rate
-                    Group {
-                        Image(systemName: "star.fill")
-                            .foregroundColor(.yellow)
-                        
-                        Text(String(format: "%.1f", movie.voteAverage))
-                            .foregroundColor(Color.ui.primaryText)
-                    }
+                    RateView(value: movie.voteAverage)
                     
                     // Separator
-                    separator
+                    SeparatorView()
+                        .padding(.horizontal)
                     
                     // Release year
                     Text(movie.releaseDate.prefix(4))
@@ -77,14 +72,6 @@ struct PosterDetailView: View {
         .sheet(isPresented: $showWebView) {
             SafariView(url: URL(string: "https://www.youtube.com/watch?v=\(videoVM.movieVideos[0].key)")!)
         }
-    }
-    
-    var separator: some View {
-        Image(systemName: "circle.fill")
-            .resizable()
-            .frame(width: 5, height: 5)
-            .foregroundColor(Color.ui.primaryText)
-            .padding(.horizontal)
     }
 }
 

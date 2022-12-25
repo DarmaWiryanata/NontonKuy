@@ -26,6 +26,9 @@
 		FAF430A1295879F100992B0A /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF430A0295879F100992B0A /* Review.swift */; };
 		FAF430A329587B0200992B0A /* ReviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF430A229587B0200992B0A /* ReviewViewModel.swift */; };
 		FAF430A529587C0900992B0A /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF430A429587C0900992B0A /* InfoView.swift */; };
+		FAF430A729587CD100992B0A /* ReviewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF430A629587CD100992B0A /* ReviewsView.swift */; };
+		FAF430A92958839600992B0A /* SeparatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF430A82958839600992B0A /* SeparatorView.swift */; };
+		FAF430AB2958847000992B0A /* RateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF430AA2958847000992B0A /* RateView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +53,9 @@
 		FAF430A0295879F100992B0A /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		FAF430A229587B0200992B0A /* ReviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewModel.swift; sourceTree = "<group>"; };
 		FAF430A429587C0900992B0A /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
+		FAF430A629587CD100992B0A /* ReviewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsView.swift; sourceTree = "<group>"; };
+		FAF430A82958839600992B0A /* SeparatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeparatorView.swift; sourceTree = "<group>"; };
+		FAF430AA2958847000992B0A /* RateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +83,8 @@
 				FA6C6097295681C60063D86F /* SectionHeaderView.swift */,
 				FA6C609929568DD10063D86F /* MovieCellView.swift */,
 				FAF4309E295870DA00992B0A /* SafariView.swift */,
+				FAF430A82958839600992B0A /* SeparatorView.swift */,
+				FAF430AA2958847000992B0A /* RateView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -105,6 +113,7 @@
 			children = (
 				FA6C60A42957588C0063D86F /* PosterDetailView.swift */,
 				FAF430A429587C0900992B0A /* InfoView.swift */,
+				FAF430A629587CD100992B0A /* ReviewsView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -256,8 +265,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAF430A729587CD100992B0A /* ReviewsView.swift in Sources */,
 				FA6C60A52957588C0063D86F /* PosterDetailView.swift in Sources */,
 				FAF430962958582B00992B0A /* Config.swift in Sources */,
+				FAF430A92958839600992B0A /* SeparatorView.swift in Sources */,
 				FA71EAC429555C5E00ED66AD /* MainScreen.swift in Sources */,
 				FAF4309A2958644900992B0A /* VideoViewModel.swift in Sources */,
 				FAF430A529587C0900992B0A /* InfoView.swift in Sources */,
@@ -270,6 +281,7 @@
 				FA6C609A29568DD10063D86F /* MovieCellView.swift in Sources */,
 				FA6C60A22956998E0063D86F /* MovieInfoScreen.swift in Sources */,
 				FA6C609F295696920063D86F /* MovieViewModel.swift in Sources */,
+				FAF430AB2958847000992B0A /* RateView.swift in Sources */,
 				FAF430982958635A00992B0A /* Video.swift in Sources */,
 				FAF430A329587B0200992B0A /* ReviewViewModel.swift in Sources */,
 				FA71EAD32955F45400ED66AD /* Color.swift in Sources */,

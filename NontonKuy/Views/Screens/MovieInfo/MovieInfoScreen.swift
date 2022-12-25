@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MovieInfoScreen: View {
     @StateObject var videoVM = VideoViewModel()
+    @StateObject var reviewVM = ReviewViewModel()
     
     let title: String
     let movie: Movie
@@ -20,10 +21,14 @@ struct MovieInfoScreen: View {
             
             // MARK: Overview
             InfoView(overview: movie.overview)
+            
+            // MARK: Reviews
+            ReviewsView(vm: reviewVM)
         }
         .edgesIgnoringSafeArea(.top)
         .onAppear {
             videoVM.getVideos(id: movie.id)
+            reviewVM.getReviews(id: movie.id)
         }
         
         .navigationTitle(title)

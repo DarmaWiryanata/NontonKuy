@@ -11,9 +11,8 @@ struct ReviewsResults: Codable {
     let results: [Review]
 }
 
-struct Review: Codable {
-    let id: Int
-    let author: String
+struct Review: Identifiable, Codable {
+    let id, author: String
     let authorDetails: AuthorDetails
     let content, createdAt, updatedAt, url: String
     
@@ -30,7 +29,7 @@ struct Review: Codable {
 struct AuthorDetails: Codable {
     let name, username: String
     let avatarPath: String?
-    let rating: Int
+    let rating: Double
     
     enum CodingKeys: String, CodingKey {
         case name, username

@@ -10,26 +10,19 @@ import Foundation
 
 class ReviewViewModel: ObservableObject {
     @Published var movieReviews = [Review]()
-    @Published var isLoadingReviews = false
     
     private var cancellables = Set<AnyCancellable>()
     
     func getReviews(id: Int) {
-        isLoadingReviews = true
-        
         guard let url = URL(string: "\(Config.tmdbBaseUrl)/movie/\(id)/reviews?&api_key=\(Config.tmdbApiKey)") else { return }
-        print(url)
         
         URLSession.shared.dataTaskPublisher(for: url)
             .subscribe(on: DispatchQueue.global(qos: .background))
             .receive(on: DispatchQueue.main)
-            .handleEvents(receiveOutput: { response in
-                self.isLoadingReviews = false
-            })
             .tryMap(handleOutput)
             .decode(type: ReviewsResults.self, decoder: JSONDecoder())
             .sink(receiveCompletion: { (completion) in
-                
+                print(completion)
             }, receiveValue: { [weak self] (results) in
                 self?.movieReviews = results.results
             })
