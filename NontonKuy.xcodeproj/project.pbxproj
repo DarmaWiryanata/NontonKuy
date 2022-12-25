@@ -24,6 +24,7 @@
 		FAF4309A2958644900992B0A /* VideoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF430992958644900992B0A /* VideoViewModel.swift */; };
 		FAF4309F295870DA00992B0A /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF4309E295870DA00992B0A /* SafariView.swift */; };
 		FAF430A1295879F100992B0A /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF430A0295879F100992B0A /* Review.swift */; };
+		FAF430A329587B0200992B0A /* ReviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF430A229587B0200992B0A /* ReviewViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		FAF430992958644900992B0A /* VideoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewModel.swift; sourceTree = "<group>"; };
 		FAF4309E295870DA00992B0A /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
 		FAF430A0295879F100992B0A /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
+		FAF430A229587B0200992B0A /* ReviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 			children = (
 				FA6C609E295696920063D86F /* MovieViewModel.swift */,
 				FAF430992958644900992B0A /* VideoViewModel.swift */,
+				FAF430A229587B0200992B0A /* ReviewViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 				FA6C60A22956998E0063D86F /* MovieInfoScreen.swift in Sources */,
 				FA6C609F295696920063D86F /* MovieViewModel.swift in Sources */,
 				FAF430982958635A00992B0A /* Video.swift in Sources */,
+				FAF430A329587B0200992B0A /* ReviewViewModel.swift in Sources */,
 				FA71EAD32955F45400ED66AD /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

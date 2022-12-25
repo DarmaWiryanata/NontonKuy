@@ -8,7 +8,7 @@
 import Foundation
 
 struct ReviewsResults: Codable {
-    let results: [Result]
+    let results: [Review]
 }
 
 struct Review: Codable {
